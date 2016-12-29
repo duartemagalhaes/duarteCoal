@@ -1,0 +1,8 @@
+1.d0 !tortuosity (0-1)
+0.5.d0 !initial porosity (0-1)
+1.d0 !number of active carbon sites, atoms/g
+1000.d0 !total number of carbon sites, atoms/g
+12.d0 !mass of carbon atom (g/site)
+700.d0 !initial density of char particle g/m3 murphy and shaddix 2006
+2e-7.d0 !pore diameter, m
+100e-6.d0 !particle diameter, m
