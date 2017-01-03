@@ -22,7 +22,7 @@ end module abs_const
 module particle
   use numerical_util
   implicit none
-  real (kind=dp) :: NA, R0
+  real (kind=dp) :: tort,porosity,act_sites,total_sites,Mc,rho_char,d_particle,d_pore
   !
 contains
   !
@@ -39,7 +39,7 @@ contains
     !not use unit 5 (keyboard) nor 6 (screen)
     close (41)
   end subroutine 
-end module read_particle
+end module particle
 !
 module surfchem
   use numerical_util
