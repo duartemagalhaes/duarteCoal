@@ -62,7 +62,7 @@ contains
     close (41)
   end subroutine read_surf_const
 end module surfchem
-    
+!
 program coal
   use surfchem
   use abs_const
