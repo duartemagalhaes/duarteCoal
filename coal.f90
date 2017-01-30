@@ -7,7 +7,7 @@ end module
 module abs_const
   use numerical_util
   implicit none
-  real (kind=dp) :: NA, R0,P,Mco,Mco2,Mn2,Mh2o,Mh2
+  real (kind=dp) :: NA, R0,P,T,Mco,Mco2,Mn2,Mh2o,Mh2
   !
 contains
   !
@@ -16,6 +16,7 @@ contains
     read (41,*) NA
     read (41,*) R0
     read (41,*) P
+    read (41,*) T
     read (41,*) Mco
     read (41,*) Mco2
     read (41,*) Mn2
@@ -29,7 +30,7 @@ end module abs_const
 module particle
   use numerical_util
   implicit none
-  real (kind=dp) :: tort,porosity,act_sites,total_sites,Mc,rho_char,d_particle,d_pore
+  real (kind=dp) :: tort,porosity,act_sites,total_sites,c,Mc,rho_char,d_particle,d_pore
   !
 contains
   !
@@ -39,6 +40,7 @@ contains
     read (41,*) porosity
     read (41,*) act_sites
     read (41,*) total_sites
+    read (41,*) c
     read (41,*) Mc
     read (41,*) rho_char
     read (41,*) d_particle
@@ -71,12 +73,11 @@ program coal
   implicit none
   !
   call read_abs_const()
-  write (7,*) NA,R0,P,Mco,Mco2,Mn2,Mh2o,Mh2
+  write (7,*) NA,R0,P,T,Mco,Mco2,Mn2,Mh2o,Mh2
   call read_particle()
-  write (8,*) tort,porosity,act_sites,total_sites,Mc,rho_char,d_particle,d_pore
+  write (8,*) tort,porosity,act_sites,total_sites,c,Mc,rho_char,d_particle,d_pore
   call read_surf_const()
   write (6,*) E1bof, E3
   !
   
 end program coal
-
