@@ -1,6 +1,7 @@
 6.022e23.d0 !avogadro number mol-1
 8.314.d0 !universal gas constant J/molK
 1.d0 !total pressure, atm
+1223.d0 !temperature,K
 28.d0 !molecular mass CO
 44.d0 !molecular mass CO2
 28.d0 !molecular mass N2
